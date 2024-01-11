@@ -5,7 +5,14 @@ class Employee:
         self.__dict__["salary"] = 1000
         self.__dict__["company"] = "Google"
         self.__dict__["position"] = "Software Engineer"
-    pass
+        self.email = "coded5@dev.com"
+
+        def increase_salary(employee, percent):
+            employee.salary += employee.salary * (percent/100)
+
+        def __str__(self):
+            return f"Employee {self.name} is {self.age} years old and works as {self.position} in {self.company}"
+
 
 emp_1 = Employee()
 print(emp_1)
